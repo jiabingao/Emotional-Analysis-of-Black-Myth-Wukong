@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bilibili Danmaku Analysis</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div id="app">
+      <nav class="navbar">
+        <div class="nav-content">
+          <div class="nav-logo">弹幕分析</div>
+          <ul class="nav-links">
+            <li><a href="#" class="active" data-page="home">首页</a></li>
+            <li><a href="#" data-page="analysis">弹幕分析</a></li>
+            <li><a href="#" data-page="visualization">弹幕可视化</a></li>
+            <li><a href="#" data-page="sentiment">情感分析</a></li>
+            <li><a href="#" data-page="wordcloud">词云生成</a></li>
+            <li><a href="#" data-page="help">帮助</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <main id="main-content">
+        <!-- Home Page -->
+        <section id="home" class="page active">
+          <div class="hero">
+            <h1>Bilibili 弹幕分析工具</h1>
+            <p class="subtitle">强大的弹幕分析和可视化平台</p>
+          </div>
+          
+          <div class="features">
+            <div class="feature-card">
+              <h3>弹幕分析</h3>
+              <p>输入视频 CID，获取并分析弹幕数据</p>
+              <button class="btn primary" data-goto="analysis">开始分析</button>
+            </div>
+            
+            <div class="feature-card">
+              <h3>情感分析</h3>
+              <p>深入了解弹幕的情感倾向</p>
+              <button class="btn primary" data-goto="sentiment">查看情感</button>
+            </div>
+            
+            <div class="feature-card">
+              <h3>词云生成</h3>
+              <p>生成精美的弹幕词云图</p>
+              <button class="btn primary" data-goto="wordcloud">生成词云</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Other pages will be dynamically loaded -->
+        <section id="analysis" class="page"></section>
+        <section id="visualization" class="page"></section>
+        <section id="sentiment" class="page"></section>
+        <section id="wordcloud" class="page"></section>
+        <section id="help" class="page"></section>
+      </main>
+
+      <footer>
+        <p>© 2024 Bilibili 弹幕分析工具 | <a href="#" data-page="help">使用帮助</a></p>
+      </footer>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
